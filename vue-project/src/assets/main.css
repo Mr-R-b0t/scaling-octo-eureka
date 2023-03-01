@@ -1,0 +1,22 @@
+@import './base.css';
+
+.login{
+  margin: auto;
+  width: 50%;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.top-login {
+  width: 350px;
+  height: 70px;
+  background-color: #087E8B;
+  border-radius: 30px 30px 0 0;
+}
+.body-login {
+  width: 350px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 30px 30px;
+}
