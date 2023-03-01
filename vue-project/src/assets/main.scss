@@ -27,11 +27,11 @@
     width: 350px;
   }
 
-  .body-form > .login {
+  .body-form.login {
     height: 280px;
   }
 
-  .body-form > .register {
+  .body-form.register {
     height: 360px;
   }
 }
@@ -40,7 +40,7 @@
   margin-top: 32px;
 }
 
-.element-form .register {
+.element-form.register {
   margin-top: 23px;
 }
 
@@ -52,7 +52,7 @@
   padding-right: 10px;
 }
 
-.element-form[type=text] .login {
+input[type=text].element-form[type=text].login {
   width: 200px;
   height: 40px;
 }
