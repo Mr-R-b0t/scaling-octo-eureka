@@ -6,18 +6,34 @@
 			<div class="top-login">
 				<h2>Register</h2>
 			</div>
-			<div class="body-register">
+			<div class="body-form register">
 				<form action="">
-					<input type="text" placeholder="Email id" class="input-register" />
-					<input type="text" placeholder="First name" class="input-register" />
-					<input type="text" placeholder="Last name" class="input-register" />
-					<input type="text" placeholder="Password" class="input-register" />
+					<input
+						type="text"
+						placeholder="Email id"
+						class="element-form register"
+					/>
+					<input
+						type="text"
+						placeholder="First name"
+						class="element-form register"
+					/>
+					<input
+						type="text"
+						placeholder="Last name"
+						class="element-form register"
+					/>
+					<input
+						type="text"
+						placeholder="Password"
+						class="element-form register"
+					/>
 					<input
 						type="text"
 						placeholder="Comfirm password"
-						class="input-register"
+						class="element-form register"
 					/>
-					<input type="button" value="Create" class="input-register" />
+					<input type="button" value="Create" class="element-form register" />
 				</form>
 			</div>
 		</div>

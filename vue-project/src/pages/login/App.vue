@@ -14,9 +14,7 @@
 						<a href="">forgot password?</a>
 						<a href="">create an account</a>
 					</div>
-					<a href="../register/index.html"
-						><input type="button" value="Login" class="input-login"
-					/></a>
+					<input type="button" value="Login" class="input-login" />
 				</form>
 			</div>
 		</div>

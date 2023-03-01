@@ -1,0 +1,83 @@
+@import './base.scss';
+
+.login{
+  margin: auto;
+  width: calc(50% - 350px);
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  .top-login {
+    width: 350px;
+    height: 70px;
+    background-color: #087E8B;
+    border-radius: 30px 30px 0 0;
+    h2 {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+
+  .body-form {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 30px 30px;
+    width: 350px;
+  }
+
+  .body-form > .login {
+    height: 280px;
+  }
+
+  .body-form > .register {
+    height: 360px;
+  }
+}
+
+.element-form.login {
+  margin-top: 32px;
+}
+
+.element-form .register {
+  margin-top: 23px;
+}
+
+.element-form[type=text] {
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.element-form[type=text] .login {
+  width: 200px;
+  height: 40px;
+}
+
+input[type=text].element-form.register{
+  width: 200px;
+  height: 30px;
+
+}
+
+input[type=button] {
+  width: 160px;
+  height: 50px;
+  background-color: #087E8B;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+}
+
+.options {
+  margin-top: 15px;
+  a {
+    color: #C1C1C1;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
