@@ -1,10 +1,59 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../Raleway/Raleway-VariableFont_wght.ttf);
+}
+
 body {
-    background-color: black;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  font-family: Raleway;
+}
+
+.home {
+  margin: auto;
+  width: 20%;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+
+#logo {
+  margin-top: 100px;
 }
 
 .violetTitle {
-    color: #7C15FF;
+  color: #7c15ff;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  border-color: white;
+  padding: 6px 32px;
+}
+
+.input {
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form * {
+  margin-top: 15px;
+}
+
+label {
+  display: inline-block;
 }
