@@ -8,12 +8,12 @@
   />
   <h1>Welcome to The <span class="violet-title"> MovieList</span></h1>
   <form action="/action_page.php" class="form">
-    <label for="fname">Email</label><br />
+    <label for="">Email</label><br />
     <input type="text" class="input center" /><br />
-    <label for="lname">Password</label><br />
-    <input type="text" class="input center" /><br /><br />
-    <label for="lname">Confirm password</label><br />
-    <input type="text" class="input center" /><br /><br />
+    <label for="">Password</label><br />
+    <input type="text" class="input center" /><br />
+    <label for="">Confirm password</label><br />
+    <input type="text" class="input center" /><br />
     <button class="button center">Connexion</button>
   </form>
 </template>
