@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: #161616;
+  color: white;
+  font-family: Raleway;
+  padding-left: 30px;
+}
+
+form {
+    padding-bottom: 15px;
+}
+
+.violetTitle {
+    color: #7C15FF;
+}
+
+h1 {
+    position : relative;
+    left: 500px;
+    font-size: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#poster {
+    position: absolute;
+    width: 150px;
+}
+
+#page {
+    margin-left: 100px;
+    display: flex;
+}
+
+#rating {
+    color: yellow;
+}
+
+#description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#film {
+    margin-left: 200px;
+    background-color: black;
+    padding: 30px;
+    border-radius: 20px;
+    min-width: 800px;
+}
