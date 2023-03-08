@@ -9,7 +9,7 @@ body {
   font-family: Raleway;
 }
 
-.home {
+.form {
   margin: auto;
   width: 20%;
 }
@@ -20,11 +20,19 @@ h1 {
   text-align: center;
 }
 
-#logo {
-  margin-top: 100px;
+#create-account {
+  margin-top: 0px !important;
+  font-weight: 400;
+  font-size: small;
+  color: white;
+  text-decoration: none;
 }
 
-.violetTitle {
+#logo {
+  margin-top: 75px;
+}
+
+.violet-title {
   color: #7c15ff;
 }
 
@@ -40,7 +48,7 @@ h1 {
   color: white;
   background-color: black;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   width: 100%;
 }
 
