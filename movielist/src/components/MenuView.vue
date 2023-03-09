@@ -1,73 +1,70 @@
 <template>
-    <body>
-        <header>
-            <img
-            alt="Vue logo"
-            src="../assets/logo.png"
-            width="40"
-            id="logo"
-            class="center"
-            />
-            <h1>The Movie List</h1>
-            <hr>
-        </header>
-        <h1 id="menuName">Menu</h1>
-        <div id="menu">
-            <a href="#menu"><img id="logos" src="../assets/menu-logos/home.png" width="17px">Home</a>
-            <a><img id="logos" src="../assets/menu-logos/discovery.png" width="17px">Discovery</a>
-            <a><img id="logos" src="../assets/menu-logos/friends.png" width="17px">Community</a>
-            <a><img id="logos" src="../assets/menu-logos/list.png" width="17px">Movie list</a>
-            <a><img id="logos" src="../assets/menu-logos/settings.png" width="17px">Settings</a>
-        </div>
-    </body>
-</template>
+    <b-sidebar style="width: 350px; float: left; background-color: black; height:1000px; margin:initial;">
+      <header>
+        <img
+          alt="Vue logo"
+          src="../assets/logo.png"
+          width="40"
+          id="logo"
+        />
+        <h1>The Movie List</h1>
+        <hr>
+      </header>
+      <h1 id="menuName">Menu</h1>
+      <div id="menu">
+        <a href="#home"><img id="logos" src="../assets/menu-logos/home.png">Home</a>
+        <a href="#discovery"><img id="logos" src="../assets/menu-logos/discovery.png">Discovery</a>
+        <a href="#community"><img id="logos" src="../assets/menu-logos/friends.png">Community</a>
+        <a href="#movielist"><img id="logos" src="../assets/menu-logos/list.png">Movie list</a>
+        <a href="#settings"><img id="logos" src="../assets/menu-logos/settings.png">Settings</a>
+      </div>
+    </b-sidebar>
+  </template>
+
 <style>
     body {
-        background-color: #161616;
-        color: white;
-        margin-left: 13px;
-        margin-top: 10px;
+      color: white;
+      margin-top: 10px;
+      float: left;
+      position:relative;
     }
+
     a {
-        padding-left: 7px;
-        display: block;
-        color: white;
-        opacity: 70%;
-        text-decoration: none;
+      padding-left: 7px;
+      display: block;
+      color: white;
+      opacity: 70%;
+      text-decoration: none;
     }
+
     a:hover {
-        opacity: 100%;
-        color: white;
+      opacity: 100%;
+      color: white;
     }
+
     #logos {
-        padding-right: 8px;
-        margin-top: 13px;
-        overflow: auto;
+      padding-right: 8px;
+      margin-top: 13px;
+      justify-content: center;
+      width: 17px;
     }
+
     #menu {
-        font-size:medium;
-    }
-    header {
-        display:inline-table;
-    }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+      font-size: medium;
     }
 
     #logo {
-        margin-top: 10px;
-        justify-content: center;
+      margin-top: 10px;
+      display: block;
     }
 
     hr {
-        width: 200px;
-        margin-left: 0;
-        opacity: 30%;
-    }
-    #menuName {
-        text-align: left;
+      width: 200px;
+      margin-left: 0;
+      opacity: 30%;
     }
 
-</style>
+    #menuName {
+      text-align: left;
+    }
+  </style>
