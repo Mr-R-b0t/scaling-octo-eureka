@@ -1,5 +1,5 @@
 <template>
-    <b-sidebar style="width: 350px; float: left; background-color: black; height:1000px; margin:initial;">
+    <b-sidebar style="width: 350px; float: left;">
       <header>
         <img
           alt="Vue logo"
@@ -23,10 +23,10 @@
 
 <style>
     body {
+      background-color: #161616;
       color: white;
       margin-top: 10px;
       float: left;
-      position:relative;
     }
 
     a {

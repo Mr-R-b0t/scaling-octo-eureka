@@ -1,13 +1,6 @@
 <template>
     <body>
-        <img
-        alt="Vue logo"
-        src="../assets/logo.png"
-        width="40"
-        id="logo"
-        class="center"
-        />
-        <h1>Settings</h1>
+        <h1 id="">Settings</h1>
         <div id="settings">
             <h3>Email</h3>
             <p>Your email</p>
@@ -15,9 +8,10 @@
             <form>
                 <label for="password">New password</label>
                 <input type="text" name="password" required>
+                <br>
                 <label for="repeatpassword">Repeat password</label>
                 <input type="text" name="repeatpassword" required>
-                <input id="submitButton" type="submit">
+                <input id="submitButton" type="submit" value="Submit">
             </form>
             <button id="delete">Delete account</button>
             <h3>About</h3>
@@ -30,23 +24,19 @@
     font-family: Raleway;
     src: url(../assets/Raleway/Raleway-VariableFont_wght.ttf);
     }
-
     body {
     background-color: #161616;
     color: white;
     font-family: Raleway;
     padding-left: 30px;
+    float: right;
     }
 
     form {
         padding-bottom: 15px;
     }
 
-    .violetTitle {
-        color: #7C15FF;
-    }
-
-    h1 {
+    #h1 {
         position : relative;
         left: 500px;
         font-size: 50px;
@@ -57,7 +47,7 @@
         text-align: center;
     }
 
-    h2 {
+    #h2 {
         position : relative;
         left: 580px;
         font-size: 20px;
@@ -86,11 +76,5 @@
     #delete:hover {
         opacity: 0.7;
 
-    }
-
-    input[type="password"], input[type="email"]
-    {
-        background: transparent;
-        border: none;
     }
 </style>
