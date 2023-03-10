@@ -2,7 +2,7 @@
   <body>
     <div id="home">
       <h1>Popular Movies</h1>
-      <div class="films">
+      <div class="films" id="scrolling-wrapper">
         <div class="card"><img src='../assets/img/avatar.jpg'>
           <h4>Nom film</h4>
         </div>
@@ -24,7 +24,7 @@
         <div class="card"><img src='../assets/img/babylon.jpg'>
           <h4>Nom film</h4>
         </div>
-        <!-- <div class="card"><img src='../assets/img/megan.jpg'>
+         <div class="card"><img src='../assets/img/megan.jpg'>
           <h4>Nom film</h4>
         </div>
         <div class="card"><img src='../assets/img/scream6.jpg'>
@@ -32,7 +32,7 @@
         </div>
         <div class="card"><img src='../assets/img/tirailleurs.jpg'>
           <h4>Nom film</h4>
-        </div> -->
+        </div>
       </div>
     </div>
 
