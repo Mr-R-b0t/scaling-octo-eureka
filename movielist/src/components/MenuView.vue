@@ -1,5 +1,5 @@
 <template>
-  <b-sidebar>
+  <b-sidebar id="left-sidebar">
     <img alt="Vue logo" src="../assets/logo.png" width="40" id="side-bar-logo" />
     <h1>The Movie List</h1>
     <hr>
