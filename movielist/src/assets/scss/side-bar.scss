@@ -1,0 +1,44 @@
+b-sidebar {
+    padding-left: 30px;
+    width: 220px;
+    height: 100%;
+    padding-right: 60px;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+#side-bar-logo {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 220px;
+    margin-left: 0;
+    opacity: 30%;
+}
+
+#side-bar-menu-name {
+    text-align: left;
+}
+
+.side-bar-menu {
+    font-size: medium;
+}
+
+.side-bar-link {
+    margin-left: 7px;
+    display: block;
+}
+
+.side-bar-icon {
+    padding-right: 8px;
+    margin-top: 13px;
+    justify-content: center;
+    width: 17px;
+}

@@ -1,80 +1,23 @@
 <template>
     <body>
-        <h1 id="">Settings</h1>
-        <div id="settings">
+        <h1>Settings</h1>
+        <div class="settings">
             <h3>Email</h3>
             <p>Your email</p>
             <h3>Change password</h3>
             <form>
-                <label for="password">New password</label>
-                <input type="text" name="password" required>
-                <br>
-                <label for="repeatpassword">Repeat password</label>
-                <input type="text" name="repeatpassword" required>
-                <input id="submitButton" type="submit" value="Submit">
+                <label for="password">New password</label> <br>
+                <input type="text" name="password" required class="input"> <br>
+                <label for="repeatpassword">Repeat password</label><br>
+                <input type="text" name="repeatpassword" required class="input">
+                <input id="submitButton" type="submit" value="Confirm" class="button confirm">
             </form>
-            <button id="delete">Delete account</button>
+            <button class="button delete">Delete account</button>
             <h3>About</h3>
             <p>Website created by Alex COLIN-MICHEL, Sébastien MEYNET, Rémi, and Dorian TURGOT</p>
         </div>
     </body>
 </template>
 <style>
-    @font-face {
-    font-family: Raleway;
-    src: url(../assets/Raleway/Raleway-VariableFont_wght.ttf);
-    }
-    body {
-    background-color: #161616;
-    color: white;
-    font-family: Raleway;
-    padding-left: 30px;
-    float: right;
-    }
-
-    form {
-        padding-bottom: 15px;
-    }
-
-    #h1 {
-        position : relative;
-        left: 500px;
-        font-size: 50px;
-        font-family: 'Raleway';
-        font-style: normal;
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    #h2 {
-        position : relative;
-        left: 580px;
-        font-size: 20px;
-        font-family: 'Raleway';
-        font-style: normal;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding-top: 500px;
-    }
-
-    #password, #email {
-        font-size: 1.5em;
-        border-bottom: 2px solid white;
-    }
-
-    #delete {
-        background-color: red;
-        color: white;
-        border-radius: 7px;
-        border-width: 1px;
-        width: 110px;
-        height: 25px;
-    }
-
-    #delete:hover {
-        opacity: 0.7;
-
-    }
+@import '../assets/scss/settings.scss'
 </style>

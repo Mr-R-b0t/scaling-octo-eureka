@@ -1,6 +1,6 @@
 <template>
-  <router-view/>
-  <Menu/>
+  <router-view />
+  <Menu />
 </template>
 
 <script>
