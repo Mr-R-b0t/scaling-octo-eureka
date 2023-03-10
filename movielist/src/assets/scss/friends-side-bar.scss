@@ -1,0 +1,43 @@
+#sidebar {
+color: white;
+padding-left: 30px;
+width: 220px;
+height: 100%;
+padding-right: 60px;
+float: left;
+position: absolute;
+top: 0;
+left: 0;
+background-color: black;
+}
+
+.friend {
+border-style: solid;
+border-radius: 30px;
+border-width: 1px;
+border-color: grey;
+padding: 10px;
+padding-bottom: 30px;
+margin-top: 30px;
+}
+
+progress {
+margin-top: 20px;
+height: 28px;
+}
+
+.friendImage {
+border-radius: 30px;
+width: 30px;
+vertical-align:middle;
+}
+
+h4 {
+display:inline;
+padding-left: 30px;
+color: white;
+}
+
+.side-bar-menu {
+font-size: medium;
+}
