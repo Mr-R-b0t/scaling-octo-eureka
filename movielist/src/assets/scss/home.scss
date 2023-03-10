@@ -1,3 +1,10 @@
+#scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 80%;
+    }
+
 body {
     background-color: #161616;
     margin-left: 180px;
