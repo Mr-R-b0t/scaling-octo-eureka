@@ -5,6 +5,10 @@
     width: 80%;
     }
 
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
 body {
     background-color: #161616;
     margin-left: 180px;
