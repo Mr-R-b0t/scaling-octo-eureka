@@ -1,0 +1,43 @@
+body {
+    background-color: #161616;
+    margin-left: 180px;
+}
+
+.button {
+    color: white;
+    border-radius: 12px;
+    padding: 6px 16px;
+    border: none;
+}
+
+.delete {
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.confirm {
+    background-color: gray;
+    margin-left: 30px;
+}
+
+.button:hover {
+    opacity: 70%;
+}
+
+.settings {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+label {
+    display: inline-block;
+}
+
+.input {
+    color: white;
+    background-color: #161616;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 400px;
+}
