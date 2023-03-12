@@ -28,12 +28,12 @@
         
         </div>
         <div  class="scrolling-wrapper" style='display:flex'>
-            <div class="card"><img class="flou" src='..\img\creed3.jpg'><div class="genre"><h1>Action</h1></div></div>
-            <div class="card"><img class="flou" src='..\img\megan.jpg'><div class="genre"><h1>Horreur</h1></div></div>
-            <div class="card"><img  class="flou" src='..\img\asterixEmpire.jpg'><div class="genre"><h1>Comedy</h1></div></div>
-            <div class="card"><img src='..\img\ouioui.jpg'></div>
-            <div class="card"><img src='..\img\ouioui.jpg'></div>
-            <div class="card"><img src='..\img\ouioui.jpg'></div>
+            <div class="card"><img class="flou" src='../assets/img/creed3.jpg'><div class="genre"><h1>Action</h1></div></div>
+            <div class="card"><img class="flou" src='../assets/img/megan.jpg'><div class="genre"><h1>Horreur</h1></div></div>
+            <div class="card"><img  class="flou" src='../assets/img/asterixEmpire.jpg'><div class="genre"><h1>Comedy</h1></div></div>
+            <div class="card"><img class="flou" src='../assets/img/tirailleurs.jpg'><div class="genre"><h1>Thriller</h1></div></div>
+            <div class="card"><img src='../assets/img/ouioui.jpg'></div>
+            <div class="card"><img src='../assets/img/ouioui.jpg'></div>
         </div>
 
         <div style='display:flex'>
