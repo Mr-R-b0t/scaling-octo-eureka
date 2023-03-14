@@ -1,75 +1,75 @@
 const console = require('console');
 const db = require('../models');
-const MovieList = db.movieList;
+const users = db.users;
 
 exports.findOne = (req, res) => {
     const id = req.params.id;
-    MovieList.findByPk(id)
+    users.findByPk(id)
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error retrieving MovieList with id=" + id
+                message: "Error retrieving users with id=" + id
             });
         });
 }
 
 exports.update = (req, res) => {
     const id = req.params.id;
-    MovieList.update(req.body, {
+    users.update(req.body, {
         where: { id: id }
     })
         .then(num => {
-            if (num == 1) {
+            if (num === 1) {
                 res.send({
-                    message: "MovieList was updated successfully."
+                    message: "User was updated successfully."
                 });
             } else {
                 res.send({
-                    message: `Cannot update MovieList with id=${id}. Maybe MovieList was not found or req.body is empty!`
+                    message: `Cannot update user with id=${id}. Maybe user was not found or req.body is empty!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error updating MovieList with id=" + id
+                message: "Error updating users with id=" + id
             });
         });
 }
 
 exports.delete = (req, res) => {
     const id = req.params.id;
-    MovieList.destroy({
+    users.destroy({
         where: { id: id }
     })
         .then(num => {
-            if (num == 1) {
+            if (num === 1) {
                 res.send({
-                    message: "MovieList was deleted successfully!"
+                    message: "users was deleted successfully!"
                 });
             } else {
                 res.send({
-                    message: `Cannot delete MovieList with id=${id}. Maybe MovieList was not found!`
+                    message: `Cannot delete users with id=${id}. Maybe users was not found!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Could not delete MovieList with id=" + id
+                message: "Could not delete users with id=" + id
             });
         });
 }
 
 exports.findAll = (req, res) => {
-    MovieList.findAll()
+    users.findAll()
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving MovieList."
+                    err.message || "Some error occurred while retrieving users."
             });
         });
 }
@@ -81,20 +81,48 @@ exports.create = (req, res) => {
         });
         return;
     }
-    const movieList = {
+    const users = {
         name: req.body.name,
         description: req.body.description,
         published: req.body.published ? req.body.published : false
     };
-    MovieList.create(movieList)
+    users.create(users)
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while creating the MovieList."
+                    err.message || "Some error occurred while creating the users."
             });
         });
 }
 
+exports.findAllPublished = (req, res) => {
+    users.findAll({ where: { published: true } })
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving users."
+            });
+        });
+}
+
+exports.deleteAll = (req, res) => {
+    users.destroy({
+        where: {},
+        truncate: false
+    })
+        .then(nums => {
+            res.send({ message: `${nums} users were deleted successfully!` });
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while removing all users."
+            });
+        });
+}

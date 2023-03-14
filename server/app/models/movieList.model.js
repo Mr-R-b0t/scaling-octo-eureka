@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const MovieList = sequelize.define('MovieList', {
-        id_list : { type : sequelize.INTEGER, allowNull: false },
-        id_movie : { type : sequelize.INTEGER, allowNull: false },
-        id_user : { type : sequelize.INTEGER, allowNull: false },
-        name : { type : sequelize.STRING, allowNull: false },
-        description : { type : sequelize.STRING, allowNull: false },
-        watched : { type : sequelize.BOOLEAN, allowNull: false },
+        id_list : { type : DataTypes.INTEGER, allowNull: false, primaryKey: true},
+        id_movie : { type : DataTypes.INTEGER, allowNull: false },
+        id_user : { type : DataTypes.INTEGER, allowNull: false },
+        name : { type : DataTypes.STRING, allowNull: false },
+        description : { type : DataTypes.STRING, allowNull: false },
+        watched : { type : DataTypes.BOOLEAN, allowNull: false },
         //date : { type : sequelize.DATE, allowNull: false },
     }, {});
     MovieList.associate = function(models) {

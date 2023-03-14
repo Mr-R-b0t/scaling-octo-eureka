@@ -1,7 +1,7 @@
-module.exports = (sequelize, DataTypes) => {
-    const Movie = sequelize.define('Movie', {
-        id_movie: { type : sequelize.INTEGER, allowNull: false },
-        title : { type : sequelize.STRING, allowNull: false },
+module.exports = (Sequelize, DataTypes) => {
+    const Movie = Sequelize.define('Movie', {
+        id_movie: { type : DataTypes.INTEGER, allowNull: false, primaryKey: true },
+        title : { type : DataTypes.STRING, allowNull: false },
         //date : { type : sequelize.DATE, allowNull: false },
     }, {});
     Movie.associate = function(models) {

@@ -1,9 +1,11 @@
 const console = require('console');
-const db = require('../models');
+const db = require('../models/movie.model');
+const Sequelize = require('sequelize');
 
 
-const MovieList = db.movieList;
-const Op = db.Sequelize.Op;
+
+const movie = db.MovieList;
+const Op = Sequelize.Op;
 
 exports.create = (req, res) => {
     // Validate request
@@ -14,8 +16,8 @@ exports.create = (req, res) => {
         return;
     }
 
-    // Create a MovieList
-    const movieList = {
+    // Create a movie
+    const movie = {
         id_list: req.body.id_list,
         id_movie: req.body.id_movie,
         id_user: req.body.id_user,
@@ -24,136 +26,136 @@ exports.create = (req, res) => {
         watched: req.body.watched
     };
 
-    // Save MovieList in the database
-    MovieList.create(movieList)
+    // Save movie in the database
+    movie.create(movie)
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while creating the MovieList."
+                    err.message || "Some error occurred while creating the movie."
             });
         });
     
 }
 
-// Retrieve all MovieLists from the database.
+// Retrieve all movies from the database.
 
 exports.findAll = (req, res) => {
     const id_list = req.query.id_list;
     var condition = id_list ? { id_list: { [Op.like]: `%${id_list}%` } } : null;
 
-    MovieList.findAll({ where: condition })
+    movie.findAll({ where: condition })
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving movieLists."
+                    err.message || "Some error occurred while retrieving movies."
             });
         });
 }
 
-// Find a single MovieList with an id
+// Find a single movie with an id
 
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    MovieList.findByPk(id)
+    movie.findByPk(id)
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error retrieving MovieList with id=" + id
+                message: "Error retrieving movie with id=" + id
             });
         });
 }
 
 
-// Update a MovieList by the id in the request
+// Update a movie by the id in the request
 
 exports.update = (req, res) => {
     const id = req.params.id;
 
-    MovieList.update(req.body, {
+    movie.update(req.body, {
         where: { id: id }
     })
         .then(num => {
-            if (num == 1) {
+            if (num === 1) {
                 res.send({
-                    message: "MovieList was updated successfully."
+                    message: "movie was updated successfully."
                 });
             } else {
                 res.send({
-                    message: `Cannot update MovieList with id=${id}. Maybe MovieList was not found or req.body is empty!`
+                    message: `Cannot update movie with id=${id}. Maybe movie was not found or req.body is empty!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error updating MovieList with id=" + id
+                message: "Error updating movie with id=" + id
             });
         });
 }
 
-// Delete a MovieList with the specified id in the request
+// Delete a movie with the specified id in the request
 
 exports.delete = (req, res) => {
     const id = req.params.id;
 
-    MovieList.destroy({
+    movie.destroy({
         where: { id: id }
     })
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "MovieList was deleted successfully!"
+                    message: "movie was deleted successfully!"
                 });
             } else {
                 res.send({
-                    message: `Cannot delete MovieList with id=${id}. Maybe MovieList was not found!`
+                    message: `Cannot delete movie with id=${id}. Maybe movie was not found!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Could not delete MovieList with id=" + id
+                message: "Could not delete movie with id=" + id
             });
         });
 }
 
-// Delete all MovieLists from the database.
+// Delete all movies from the database.
 
 exports.deleteAll = (req, res) => {
-    MovieList.destroy({
+    movie.destroy({
         where: {},
         truncate: false
     })
         .then(nums => {
-            res.send({ message: `${nums} MovieLists were deleted successfully!` });
+            res.send({ message: `${nums} movies were deleted successfully!` });
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while removing all movieLists."
+                    err.message || "Some error occurred while removing all movies."
             });
         });
 }
 
-// Find all published MovieLists
+// Find all published movies
 
 exports.findAllPublished = (req, res) => {
-    MovieList.findAll({ where: { published: true } })
+    movie.findAll({ where: { published: true } })
         .then(data => {
             res.send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving movieLists."
+                    err.message || "Some error occurred while retrieving movies."
             });
         });
 }

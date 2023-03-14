@@ -21,7 +21,11 @@ app.get('/v1/api', (req, res) => {
     res.json({ message: 'Welcome to movielist application.' });
 });
 
+require('./app/routes/users.routes')(app);
 require('./app/routes/movie.routes')(app);
+require('./app/routes/friendList.routes')(app);
+require('./app/routes/movieList.routes')(app);
+
 
 const PORT = process.env.PORT || 8080 
 app.listen(PORT, () => {
