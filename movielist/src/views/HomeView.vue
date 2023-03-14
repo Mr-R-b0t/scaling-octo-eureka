@@ -36,60 +36,33 @@
       </div>
     </div>
 
-    <h1>Genres</h1>
+    <h1>Upcoming Movies</h1>
     <div class="films">
-      <div class="card"><img class="flou" src='../assets/img/creed3.jpg'>
-        <div class="genre">
-          <h3>Action</h3>
+      <div class="card"><img src='../assets/img/creed3.jpg'>
         </div>
+
+      <div class="card"><img src='../assets/img/megan.jpg'>
+        </div>
+
+      <div class="card"><img src='../assets/img/asterixEmpire.jpg'>
       </div>
 
-      <div class="card"><img class="flou" src='../assets/img/megan.jpg'>
-        <div class="genre">
-          <h3>Horror</h3>
+      <div class="card"><img src='../assets/img/tirailleurs.jpg'>
         </div>
+
+      <div class="card"><img src='../assets/img/buzz.jpg'>
       </div>
 
-      <div class="card"><img class="flou" src='../assets/img/asterixEmpire.jpg'>
-        <div class="genre">
-          <h3>Comedy</h3>
-        </div>
+      <div class="card"><img src='../assets/img/topgun.jpg'>
       </div>
 
-      <div class="card"><img class="flou" src='../assets/img/tirailleurs.jpg'>
-        <div class="genre">
-          <h3>Thriller</h3>
-        </div>
+      <div class="card"><img src='../assets/img/avatar.jpg'>
       </div>
 
-      <div class="card"><img class="flou" src='../assets/img/buzz.jpg'>
-        <div class="genre">
-          <h3>Animation</h3>
-        </div>
+      <div class="card"><img src='../assets/img/chatpotte.jpg'>
       </div>
 
-      <div class="card"><img class="flou" src='../assets/img/topgun.jpg'>
-        <div class="genre">
-          <h3>Adventure</h3>
-        </div>
-      </div>
-
-      <div class="card"><img class="flou" src='../assets/img/avatar.jpg'>
-        <div class="genre">
-          <h3>Fantasy</h3>
-        </div>
-      </div>
-
-      <div class="card"><img class="flou" src='../assets/img/chatpotte.jpg'>
-        <div class="genre">
-          <h3>Family</h3>
-        </div>
-      </div>
-
-      <div class="card"><img class="flou" src='../assets/img/antmanQ.jpg'>
-        <div class="genre">
-          <h3>Sci-Fi</h3>
-        </div>
+      <div class="card"><img src='../assets/img/antmanQ.jpg'>
       </div>
     </div>
 
