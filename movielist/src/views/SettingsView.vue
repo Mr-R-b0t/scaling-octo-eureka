@@ -1,4 +1,7 @@
 <template>
+    <router-view />
+    <Menu />
+    <Friends />
     <body>
         <h1>Settings</h1>
         <div class="settings">
@@ -14,10 +17,21 @@
             </form>
             <button class="button delete">Delete account</button>
             <h3>About</h3>
-            <p>Website created by Alex COLIN-MICHEL, Sébastien MEYNET, Rémi, and Dorian TURGOT</p>
+            <p>Website created by Alex COLIN-MICHEL, Sébastien MEYNET, Rémi R MATHIVANAN, and Dorian TURGOT</p>
         </div>
     </body>
 </template>
 <style>
 @import '../assets/scss/settings.scss'
 </style>
+
+<script>
+import Menu from '../components/MenuView.vue'
+import Friends from '../components/FriendsView.vue'
+export default {
+  components: {
+    Menu,
+    Friends
+  }
+}
+</script>

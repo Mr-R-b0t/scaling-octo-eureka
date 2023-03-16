@@ -1,4 +1,7 @@
 <template>
+  <router-view />
+  <Menu />
+  <Friends />
   <body>
     <div id="home">
       <h1>Popular Movies</h1>
@@ -66,15 +69,49 @@
       </div>
     </div>
 
-    <!-- <h1>Provider</h1>
-     <div style='display:flex'>
-      <div><img class="site" src='../assets/img/netflix.jpg'></div>
-      <div><img class="site" src='../assets/img/disney.jpg'></div>
-      <div><img class="site" src='../assets/img/amazon.jpg'></div>
-      </div> -->
+    <h1>Continue watching</h1>
+    <div class="films">
+      <div class="card"><img src='../assets/img/creed3.jpg'>
+        </div>
+
+      <div class="card"><img src='../assets/img/megan.jpg'>
+        </div>
+
+      <div class="card"><img src='../assets/img/asterixEmpire.jpg'>
+      </div>
+
+      <div class="card"><img src='../assets/img/tirailleurs.jpg'>
+        </div>
+
+      <div class="card"><img src='../assets/img/buzz.jpg'>
+      </div>
+
+      <div class="card"><img src='../assets/img/topgun.jpg'>
+      </div>
+
+      <div class="card"><img src='../assets/img/avatar.jpg'>
+      </div>
+
+      <div class="card"><img src='../assets/img/chatpotte.jpg'>
+      </div>
+
+      <div class="card"><img src='../assets/img/antmanQ.jpg'>
+      </div>
+    </div>
 
   </body>
 </template>
 <style>
 @import '../assets/scss/home.scss'
 </style>
+
+<script>
+import Menu from '../components/MenuView.vue'
+import Friends from '../components/FriendsView.vue'
+export default {
+  components: {
+    Menu,
+    Friends
+  }
+}
+</script>

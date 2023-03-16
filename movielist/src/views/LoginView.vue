@@ -7,7 +7,7 @@
     <label for="">Password</label><br />
     <input type="text" class="input center" /><br />
     <a href="#register" id="link-login-register">Create an account</a>
-    <button class="button center">Connexion</button>
+    <a href="#home"><input type="button" value="Connexion" class="button center"></a>
   </form>
 </template>
 

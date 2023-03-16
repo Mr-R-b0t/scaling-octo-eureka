@@ -1,23 +1,25 @@
 #left-sidebar {
     padding-left: 30px;
     width: 220px;
-    height: 100%;
+    height: 110%;
     padding-right: 60px;
     position: absolute;
     top: 0;
     left: 0;
     background-color: black;
+    z-index: 11;
 }
 
 #right-sidebar {
     padding-left: 30px;
     width: 220px;
-    height: 100%;
+    height: 110%;
     padding-right: 60px;
     position: absolute;
     top: 0;
     right: 0;
     background-color: black;
+    z-index: 11;
 }
 
 #side-bar-logo {

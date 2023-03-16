@@ -1,4 +1,7 @@
 <template>
+  <router-view />
+  <Menu />
+  <Friends />
     <body>
       <div id="discovery">
         <h1>Popular Movies</h1>
@@ -85,8 +88,8 @@
       </div>
       <h1>Provider</h1>
       <div class="provider" id="scrolling-wrapper" style='display:flex'>
-        <div><img class="site" src='../assets/img/netflix.jpg'></div>
-        <div><img class="site" src='../assets/img/disney.jpg'></div>
+        <div><a href="https://www.netflix.com/ca-fr/"><img class="site" src='../assets/img/netflix.jpg'></a></div>
+        <div><a href="https://www.disneyplus.com/fr-ca"><img class="site" src='../assets/img/disney.jpg'></a></div>
         <div><img class="site" src='../assets/img/amazon.jpg'></div>
         <div><img class="site" src='../assets/img/OCS.jpg'></div>
         </div>
@@ -95,3 +98,14 @@
   <style>
     @import '../assets/scss/discovery.scss'
   </style>
+
+<script>
+import Menu from '../components/MenuView.vue'
+import Friends from '../components/FriendsView.vue'
+export default {
+  components: {
+    Menu,
+    Friends
+  }
+}
+</script>
