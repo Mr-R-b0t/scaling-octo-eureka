@@ -36,7 +36,7 @@
         </div>
       </div>
       <h1>Genres</h1>
-      <div class="films">
+      <div class="films" id="scrolling-wrapper">
         <div class="card"><img class="flou" src='../assets/img/creed3.jpg'>
           <div class="genre">
             <h3>Action</h3>
@@ -84,10 +84,11 @@
         </div>
       </div>
       <h1>Provider</h1>
-      <div style='display:flex'>
+      <div class="provider" id="scrolling-wrapper" style='display:flex'>
         <div><img class="site" src='../assets/img/netflix.jpg'></div>
         <div><img class="site" src='../assets/img/disney.jpg'></div>
         <div><img class="site" src='../assets/img/amazon.jpg'></div>
+        <div><img class="site" src='../assets/img/OCS.jpg'></div>
         </div>
     </body>
   </template>

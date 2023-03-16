@@ -22,7 +22,8 @@ h1 {
     color: white;
 }
 
-h3 {
+h3,
+h4 {
     text-align: center;
 }
 
@@ -43,9 +44,11 @@ h3 {
 }
 
 
+
 .site {
     width: 200px;
     height: 100px;
     margin: 30px;
+    margin-right: 60px;
     border-radius: 10px;
 }
