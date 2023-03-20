@@ -17,6 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "connex": "^0.0.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mysql2": "^3.2.0",

@@ -5,7 +5,8 @@ export default axios.create({
   withCredentials: true,
   headers:
     {
-      'Content-type': 'application/json'
+      'Content-type': 'application/json',
+      'Access-Control-Allow-Credentials': 'true'
     }
     // Authorization: "Bearer " + localStorage.getItem("token")
 })

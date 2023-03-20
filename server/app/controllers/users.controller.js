@@ -2,6 +2,7 @@ const console = require('console');
 const db = require('../models');
 const users = db.users;
 
+
 exports.findOne = (req, res) => {
     const id = req.params.id;
     users.findByPk(id)
@@ -74,29 +75,35 @@ exports.findAll = (req, res) => {
         });
 }
 
-exports.create = (req, res) => {
-    if (!req.body.name) {
-        res.status(400).send({
-            message: "Content can not be empty!"
+exports.create = async (req, res) => {
+   if (!req.body.lastname || !req.body.email || !req.body.password || !req.body.name) {
+    res.status(400).send({
+      message: "User must have name, email !",
+    });
+    return;
+  } 
+  if ( await users.findOne({ where: { mail: req.body.email } })) {
+    res.status(511).send({
+        message: "User already exists !",
         });
-        return;
-    }
-    const users = {
-        name: req.body.name,
-        description: req.body.description,
-        published: req.body.published ? req.body.published : false
-    };
-    users.create(users)
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while creating the users."
-            });
-        });
-}
+    return;
+    } 
+  await users
+    .create({
+      name: req.body.name,
+      lastname: req.body.lastname,
+      mail: req.body.email,
+      password: req.body.password,
+    })
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Could not insert the data",
+      });
+    });
+};
 
 exports.findAllPublished = (req, res) => {
     users.findAll({ where: { published: true } })
