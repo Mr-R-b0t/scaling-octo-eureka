@@ -11,7 +11,7 @@
 import Menu from '../components/MenuView.vue'
 import Friends from '../components/FriendsView.vue'
 import EventCard from '../components/EventCard.vue'
-import EventService from '../services/EventService.js'
+import MovieDataService from '../services/EventService.js'
 export default {
   components: {
     Menu,
@@ -26,7 +26,7 @@ export default {
     }
   },
   created() {
-    EventService.getEvents()
+    MovieDataService.getAll()
       .then((response) => {
         console.log('events:', response.data.results)
         this.events = response.data.results
