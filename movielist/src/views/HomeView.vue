@@ -6,9 +6,7 @@
   <body>
     <div id="home">
       <h1>Popular Movies</h1>
-      <div id="movie-container">
-        <div class="films" id="scrolling-wrapper">
-        </div>
+      <div class="films" id="movie-container">
       </div>
     </div>
 
