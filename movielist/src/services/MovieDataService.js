@@ -29,3 +29,4 @@ class MovieDataService {
     return http.get(`/movies?title=${title}`)
   }
 }
+export default new MovieDataService()
