@@ -59,12 +59,16 @@ function getFilmPage(id) {
       const revenue = 'Revenue : ' + film.revenue + '$'
       const language = 'Language : ' + film.original_language
 
+      console.log(name + '\n' + poster + '\n' + underTitle + '\n' + rating + '\n' + description + '\n' + status + '\n' + genres + '\n' + budget + '\n' + revenue + '\n' + language)
+
       return [name, poster, underTitle, rating, description, status, genres, budget, revenue, language]
     })
     .catch(err => {
       console.log('Error: ', err.message)
     })
 }
+
+getFilmPage(934433)
 
 function getFilmCard(id) {
   axios.get(' https://api.themoviedb.org/3/movie/' + id + '?api_key=66188e8432a52693bcb7abc97edbda86')
