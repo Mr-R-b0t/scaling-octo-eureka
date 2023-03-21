@@ -14,6 +14,7 @@
         list</a>
       <a href="#settings" class="side-bar-link"><img class="side-bar-icon"
           src="../assets/menu-logos/settings.png">Settings</a>
+      <input type="button" value="Déconnexion" class="button center" id="log-out">
     </div>
   </b-sidebar>
 </template>
