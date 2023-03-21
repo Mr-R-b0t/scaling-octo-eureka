@@ -5,15 +5,15 @@
           <h2>Friends activity</h2>
           <div class="side-bar-menu">
               <div class="friend">
-                  <a><img class="friendImage" src="pp.jpg"><h4>Pablo Escobar</h4></a>
+                  <a><img class="friendImage" src="../assets/menu-logos/friends.png"><h4>Pablo Escobar</h4></a>
                   <progress value="30" max="100"></progress>
               </div>
               <div class="friend">
-                  <a><img class="friendImage" src="pp.jpg"><h4>Okba Loan</h4></a>
+                  <a><img class="friendImage" src="../assets/menu-logos/friends.png"><h4>Okba Loan</h4></a>
                   <progress value="80" max="100"></progress>
               </div>
               <div class="friend">
-                  <a><img class="friendImage" src="pp.jpg"><h4>Ilam Az</h4></a>
+                  <a><img class="friendImage" src="../assets/menu-logos/friends.png"><h4>Ilam Az</h4></a>
                   <progress value="50" max="100"></progress>
               </div>
           </div>

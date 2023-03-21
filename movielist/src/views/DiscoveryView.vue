@@ -5,12 +5,20 @@
 
   <body>
     <div id="discovery">
-      <h1>All Movies</h1>
+      <h1>All Movies from database</h1>
       <div class="films">
         <div v-for="(film) in films" :key="film.id_movie">
+          <div class="card"><img :src="film.poster">
+              <h3>{{ film.title }}</h3>
+          </div>
+        </div>
+      </div>
+      <h1>Genres from database</h1>
+      <div class="films">
+        <div v-for="film in films" :key="film.genre">
           <div class="card"><img class="flou" :src="film.poster">
             <div class="genre">
-              <h3>{{ film.title }}</h3>
+              <h3>{{ film.genre }}</h3>
             </div>
           </div>
         </div>

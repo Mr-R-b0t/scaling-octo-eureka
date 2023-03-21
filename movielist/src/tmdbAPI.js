@@ -31,7 +31,7 @@ function displayPopularMovies() {
       const movieHtml = `
         <div class="card">
           <img src="${posterUrl}" alt=${id}/>
-          <h4>${title}</h4>
+          <h3>${title}</h3>
         </div>
       `
       movieContainer.innerHTML += movieHtml
@@ -95,10 +95,50 @@ function getProvider(id) {
     })
 }
 
+function getUpcomingMovies() {
+  return axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=66188e8432a52693bcb7abc97edbda86&language=en-US&page=1')
+    .then(res => {
+      const films = res.data
+      const filmPage = []
+
+      for (let i = 0; i < 10; i++) {
+        const filmList = [
+          films.results[i].id,
+          films.results[i].title,
+          'https://image.tmdb.org/t/p/original' + films.results[i].poster_path
+        ]
+        filmPage.push(filmList)
+      }
+
+      return filmPage
+    })
+    .catch(err => {
+      console.log('Error: ', err.message)
+    })
+}
+
+function displayUpcomingMovies() {
+  const movieContainer = document.getElementById('upcoming-container')
+
+  getUpcomingMovies().then((filmPage) => {
+    filmPage.forEach((filmList) => {
+      const [id, title, posterUrl] = filmList
+      const movieHtml = `
+        <div class="card">
+          <img src="${posterUrl}" alt=${id}/>
+          <h3>${title}</h3>
+        </div>
+      `
+      movieContainer.innerHTML += movieHtml
+    })
+  })
+}
+
 module.exports = {
   getPopularMovies,
   getFilmPage,
   getFilmCard,
   getProvider,
-  displayPopularMovies
+  displayPopularMovies,
+  displayUpcomingMovies
 }
