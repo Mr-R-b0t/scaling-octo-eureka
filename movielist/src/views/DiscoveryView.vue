@@ -61,7 +61,6 @@ export default {
           this.films.vote_average = film.vote_average
           this.films.vote_count = film.vote_count
         })
-        console.log(this.films)
       })
       .catch(e => {
         console.log(e)

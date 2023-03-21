@@ -1,20 +1,23 @@
 <template>
-    <router-view />
-    <Menu />
-    <Friends />
-    <body>
-      <div id="home">
-        <h1>Movie lists</h1>
-        <div class="films" id="scrolling-wrapper" v-for="(list) in lists" :key="list.id">
-          <div class="card"><img class="flou" src="../assets/img/babylon.jpg">
+  <router-view />
+  <Menu />
+  <Friends />
+
+  <body>
+    <div id="discovery">
+      <h1>All Movies</h1>
+      <div class="films" id="scrolling-wrapper">
+        <div v-for="(film) in films" :key="film.id_movie">
+          <div class="card"><img class="flou" :src="film.poster">
             <div class="genre">
-              <h3>{{list.name}}</h3>
+              <h3>{{ film.title }}</h3>
             </div>
           </div>
         </div>
       </div>
-    </body>
-  </template>
+    </div>
+  </body>
+</template>
   <style>
   @import '../assets/scss/home.scss'
   </style>
@@ -28,11 +31,37 @@ export default {
     Menu,
     Friends
   },
-  mounted () {
+  data() {
+    return {
+      films: {
+        id_movie: '',
+        title: '',
+        poster: '',
+        overview: '',
+        release_date: '',
+        genre: '',
+        runtime: '',
+        vote_average: '',
+        vote_count: ''
+      }
+    }
+  },
+  mounted() {
     MovieListDataService.getAll()
       .then(response => {
-        this.lists = response.data
+        this.films = response.data
         console.log(response.data)
+        response.data.forEach(film => {
+          this.films.id_movie = film.id_movie
+          this.films.title = film.title
+          this.films.poster_path = film.poster
+          this.films.overview = film.overview
+          this.films.release_date = film.release_date
+          this.films.genre = film.genre
+          this.films.runtime = film.runtime
+          this.films.vote_average = film.vote_average
+          this.films.vote_count = film.vote_count
+        })
       })
       .catch(e => {
         console.log(e)

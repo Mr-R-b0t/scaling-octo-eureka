@@ -38,7 +38,7 @@ exports.create = async (req, res) => {
             return;
         }
 
-    if (await User.findOne({ where: { mail: req.body.email } })) {
+    if (await User.findOne({ where: { email: req.body.email } })) {
       res.status(403).send({
         message: "User already exists !",
       });
