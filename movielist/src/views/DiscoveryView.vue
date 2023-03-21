@@ -2,24 +2,25 @@
   <router-view />
   <Menu />
   <Friends />
-    <body>
-      <div id="discovery">
-        <h1>All Movies</h1>
-        <div class="films" id="scrolling-wrapper">
+
+  <body>
+    <div id="discovery">
+      <h1>All Movies</h1>
+      <div class="films">
         <div v-for="(film) in films" :key="film.id_movie">
           <div class="card"><img class="flou" :src="film.poster">
             <div class="genre">
-              <h3>{{film.title}}</h3>
+              <h3>{{ film.title }}</h3>
             </div>
-          </div>
           </div>
         </div>
       </div>
-    </body>
-  </template>
-  <style>
-    @import '../assets/scss/discovery.scss'
-  </style>
+    </div>
+  </body>
+</template>
+<style>
+@import '../assets/scss/home.scss'
+</style>
 
 <script>
 import Menu from '../components/MenuView.vue'
@@ -30,7 +31,7 @@ export default {
     Menu,
     Friends
   },
-  data () {
+  data() {
     return {
       films: {
         id_movie: '',
@@ -45,7 +46,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     MovieDataService.getAll()
       .then(response => {
         this.films = response.data
