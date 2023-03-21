@@ -32,6 +32,16 @@ export default {
   components: {
     Menu,
     Friends
+  },
+  data () {
+    return {
+      user: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
   }
 }
 </script>
