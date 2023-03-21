@@ -61,8 +61,14 @@ export default {
             console.log(this.user)
           })
           .catch((e) => {
-            if (e.response.status === 511) {
-              alert('This email is already used')
+            if (e.response.status === 403) {
+              alert(e.response.data.message)
+            }
+            if (e.response.status === 401) {
+              alert(e.response.data.message)
+            }
+            if (e.response.status === 402) {
+              alert(e.response.data.message)
             }
             console.log(e)
           })

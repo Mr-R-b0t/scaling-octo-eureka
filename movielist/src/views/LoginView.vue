@@ -31,20 +31,25 @@ export default {
   },
   methods: {
     login() {
+      const data = {
+        email: this.user.email,
+        password: this.user.password
+      }
       const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
       if (this.user.email === '' || this.user.password === '') return alert('Please fill in all fields')
       if (this.user.email.match(mailformat) === null) {
         return alert('Please enter a valid email address')
       } else {
-        UserDataService.login(this.user.email, this.user.password)
+        UserDataService.postLogin(data)
           .then((response) => {
-            console.log(response.data)
-            this.$store.commit('setUser', response.data)
-            // localStorage.setItem('token', response.data.user)
-            this.$router.push('/home')
+            // localStorage.setItem('token', response.data.token)
+            this.$store.dispatch('user', response.data.user)
+            this.$router.push({ name: 'home' })
           })
-          .catch((e) => {
-            console.log(e)
+          .catch(error => {
+            // Handle the error here
+            this.message = error.response.data.message
+            // console.log(error.response.data.body.message)
           })
       }
     }

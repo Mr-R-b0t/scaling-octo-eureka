@@ -1,35 +1,19 @@
 import http from '../http-common'
 class UserDataService {
-  getAll () {
-    return http.get('/users')
+  create(data) {
+    return http.post('/user', data)
   }
 
-  get (id) {
-    return http.get(`/users/${id}`)
+  postLogin(data) {
+    return http.post('/user/login', data)
   }
 
-  create (data) {
-    return http.post('/users', data)
+  getAuth() {
+    return http.get('/user/auth')
   }
 
-  update (id, data) {
-    return http.put(`/users/${id}`, data)
-  }
-
-  delete(id) {
-    return http.delete(`/users/${id}`)
-  }
-
-  login(data) {
-    return http.post('/users/login', data)
-  }
-
-  deleteAll() {
-    return http.delete('/users')
-  }
-
-  findByUsername(username) {
-    return http.get(`/users?username=${username}`)
+  getLogout() {
+    return http.get('/user/logout')
   }
 }
 export default new UserDataService()
