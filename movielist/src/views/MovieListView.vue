@@ -19,7 +19,7 @@
   </body>
 </template>
   <style>
-  @import '../assets/scss/home.scss'
+  @import '../assets/scss/discovery.scss'
   </style>
 
 <script>
