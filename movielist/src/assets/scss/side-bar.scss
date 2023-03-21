@@ -54,3 +54,21 @@ hr {
     justify-content: center;
     width: 17px;
 }
+
+.button {
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    border-color: white;
+    padding: 6px 32px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#log-out {
+    margin-top: 100px;
+}
