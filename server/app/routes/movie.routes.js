@@ -1,32 +1,16 @@
-const users = require("../controllers/users.controller");
-module.exports = app => {
-    const movie = require("../controllers/movie.controller.js");
-    var router = require("express").Router();
+module.exports = (app) => {
+  const movies = require("../controllers/movie.controller.js");
+  const router = require("express").Router();
 
-    //Create a new Movie
+  router.get("/", movies.findAll);
 
-    router.post("/", movie.create);
+  router.post("/", movies.create);
 
-    //Retrieve all Movies
+  router.get("/:id", movies.findOne);
 
-    router.get("/", movie.findAll);
+  router.delete("/:id", movies.delete);
 
-    //Retrieve a single Movie with id
+  router.put("/:id", movies.update);
 
-    router.get("/:id", movie.findOne);
-
-    //Update a Movie with id
-
-    router.put("/:id", movie.update);
-
-    //Delete a Movie with id
-
-    router.delete("/:id", movie.delete);
-
-    //Delete all Movies
-
-    router.delete("/", movie.deleteAll);
-
-    app.use('/api/movies', router);
-
+  app.use("/api/movies", router);
 };

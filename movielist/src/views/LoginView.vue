@@ -19,6 +19,7 @@
 
 <script>
 import UserDataService from '@/services/UserDataService'
+
 export default {
   name: 'LoginView',
   data() {
@@ -42,14 +43,15 @@ export default {
       } else {
         UserDataService.postLogin(data)
           .then((response) => {
+            console.log(response.data.user)
             // localStorage.setItem('token', response.data.token)
-            // this.$store.dispatch('user', response.data.user)
+            this.$store.dispatch('user', response.user)
             this.$router.push({ name: 'home' })
           })
           .catch(error => {
             // Handle the error here
-            alert(error.response.message)
-            // console.log(error.response.data.body.message)
+            alert('Woulah ca marche pas')
+            alert(error + 'woulah ca marche pas')
           })
       }
     }
