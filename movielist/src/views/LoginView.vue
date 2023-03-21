@@ -18,7 +18,7 @@
 </style>
 
 <script>
-import { UserDataService } from '../services/UserDataService'
+import UserDataService from '@/services/UserDataService'
 export default {
   name: 'LoginView',
   data() {
@@ -43,12 +43,12 @@ export default {
         UserDataService.postLogin(data)
           .then((response) => {
             // localStorage.setItem('token', response.data.token)
-            this.$store.dispatch('user', response.data.user)
+            // this.$store.dispatch('user', response.data.user)
             this.$router.push({ name: 'home' })
           })
           .catch(error => {
             // Handle the error here
-            this.message = error.response.data.message
+            alert(error.response.message)
             // console.log(error.response.data.body.message)
           })
       }

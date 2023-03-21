@@ -47,7 +47,7 @@ exports.create = async (req, res) => {
   const salt = await bcrypt.genSalt(10);
   const hashPassword = await bcrypt.hash(req.body.password, salt);
   await User.create({
-    fullname: req.body.fullname,
+    fullname: req.body.lastname + " " + req.body.name,
     email: req.body.email,
     password: hashPassword,
   })
@@ -82,7 +82,6 @@ exports.findOne = async (req, res, next) => {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000,
   });
-
   user.update({
     token: token,
   });
@@ -122,3 +121,4 @@ exports.logout = async (req, res) => {
     message: "success",
   });
 };
+    

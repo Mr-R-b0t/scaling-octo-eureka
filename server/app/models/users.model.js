@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
           autoIncrement: true,
           unique: true,
         },
-        name: { type: DataTypes.STRING, allowNull: true },
-        lastname: { type: DataTypes.STRING, allowNull: true },
-        mail: { type: DataTypes.STRING, allowNull: true },
+        fullname : { type: DataTypes.STRING, allowNull: true },
+        email: { type: DataTypes.STRING, allowNull: true },
         password: { type: DataTypes.STRING, allowNull: true },
+        token : { type: DataTypes.STRING, allowNull: true },
         /* createAt : { type: DataTypes.DATE, allowNull: true, defaultValue: sequelize.NOW },
         updateAt : { type: DataTypes.DATE, allowNull: true, defaultValue: sequelize.NOW }, */
       },
