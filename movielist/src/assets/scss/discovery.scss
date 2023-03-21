@@ -1,23 +1,20 @@
-#scrolling-wrapper {
+.films,
+.provider {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     width: 90%;
-    }
+    display: flex;
+}
 
-::-webkit-scrollbar { 
-    display: none; 
-    }
+::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     background-color: #161616;
-    margin-left: 180px;
-    margin-right: 150px;
-    
-}
-
-.films, .provider {
-    display: flex;
+    margin-left: 340px;
+    margin-right: 240px;
 }
 
 h1 {
@@ -27,10 +24,12 @@ h1 {
 h3,
 h4 {
     text-align: center;
+    white-space: pre-line;
 }
 
 .genre {
     position: relative;
+    bottom: 110px;
 }
 
 .card {
@@ -44,15 +43,20 @@ h4 {
     border-radius: 10px;
 }
 
-.flou {
-    filter: blur(2px);
-}
-
 .site {
     width: 200px;
     height: 100px;
     margin: 30px;
+    margin-right: 60px;
     border-radius: 10px;
 }
 
+.flou {
+    filter: blur(2px);
+}
 
+#discovery {
+    position: relative;
+    left: -340px;
+    width: 900px;
+}
