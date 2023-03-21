@@ -3,20 +3,20 @@
     overflow-y: hidden;
     white-space: nowrap;
     width: 90%;
-    }
+}
 
-::-webkit-scrollbar { 
-    display: none; 
-    }
+::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     background-color: #161616;
     margin-left: 340px;
     margin-right: 240px;
-    
 }
 
-.films, .provider {
+.films,
+.provider {
     display: flex;
 }
 
@@ -44,15 +44,9 @@ h4 {
     border-radius: 10px;
 }
 
-.flou {
-    filter: blur(2px);
-}
-
 .site {
     width: 200px;
     height: 100px;
     margin: 30px;
     border-radius: 10px;
 }
-
-
